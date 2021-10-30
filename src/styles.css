@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Nunito, Arial, Helvetica, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  transition: all .5s ease;
+}
+
+html,
+body, #root {
+  min-height: 100%;
+}
+
+body {
+  color: #426a69;
+  background: #198891;
+}
+
+.App {
+  padding: 50px;
+}
+
+h1 {
+  color: #fafafa;
+  font-weight: 800;
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.searchBar {
+  width: 450px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.searchBar input,
+.searchBar button {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.searchBar input {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.searchBar input:focus {
+  outline: none;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.searchBar button {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(158, 218, 148, 1) 0%,
+    rgba(41, 203, 170, 1) 100%
+  );
+  color: #fff;
+
+  position: absolute;
+  top: 6px;
+  right: -50px;
+
+  box-shadow: none;
+
+  cursor: pointer;
+}
+
+.searchBar button:hover {
+  background: rgba(41, 203, 170, 1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.pokemonDetails {
+  width: 100%;
+  background: #fafafa;
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  border-radius: 28px 28px 0 0;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.5s;
+}
+
+.pokemonDetails img {
+  max-width: 220px;
+
+  width: auto;
+  height: auto;
+
+  margin-right: 15px;
+}
+  
+.pokemonDetails .card-details {
+  width: 80%;
+}
+
+.pokemonDetails .hp .hp-bar {
+  width: 100%;
+  height: 10px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(158, 218, 148, 1) 0%,
+    rgba(41, 203, 170, 1) 100%
+  );
+
+  border-radius: 7px;
+
+  position: relative;
+}
+
+.stats {
+  display: flex;
+  height: 80px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.stats div {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.stats div:not(:first-child) {
+  border-left: 1px solid #426a69;
+}
